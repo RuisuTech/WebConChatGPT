@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modo Oscuro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container-header">
+      <h1>Modo Oscuro</h1>
+    </header>
+
+    <main class="container-main">
+        <h2>¿Lo logré?</h2>
+        <button id="toggleMode">Modo Oscuro</button>
+        <p>
+          ¡Lo logré!
+        </p>
+    </main>
+
+    <footer class="container-footer">
+      <p>&copy; 2024 El Modo Oscuro</p>
+    </footer>
+
+    <script>
+      const toggleModeButton = document.getElementById('toggleMode');
+      const body = document.body;
+
+      toggleModeButton.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        const mode = body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+        toggleModeButton.textContent = mode;
+      });
+    </script>
+  </body>
+</html>

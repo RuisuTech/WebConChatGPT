@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Encabezado - Contenido - Pie de página */
+  min-height: 100vh; /* La página ocupará al menos toda la altura del viewport */
+}
+
+header {
+  background-color: #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  gap: 1em;
+}
+
+#toggleMode {
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+footer {
+  background-color: #dddddd;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.dark-mode #toggleMode {
+  background-color: #444444; /* Color de fondo de botón oscuro */
+  color: #ffffff; /* Color de texto de botón claro */
+}
+
+.dark-mode .container-header {
+  background-color: #222222; /* Color de fondo del pie de página oscuro */
+  color: #ffffff; /* Color de texto del pie de página claro */
+}
+
+.dark-mode .container-main {
+  background-color: #111111; /* Color de fondo del pie de página oscuro */
+  color: #ffffff; /* Color de texto del pie de página claro */
+}
+
+.dark-mode .container-footer {
+  background-color: #222; /* Color de fondo del pie de página oscuro */
+  color: #fff; /* Color de texto del pie de página claro */
+}
+
